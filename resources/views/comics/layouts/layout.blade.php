@@ -11,7 +11,10 @@
 </head>
 
 <body>
+  <div style="display: flex">
     @yield('comics')
+  </div>
+
     @yield('comic')
     @yield('create')
     {{-- @include('partials.header')
@@ -21,3 +24,13 @@
 </body>
 
 </html>
+<script>
+    const deleteButton = document.getElementById("deleteButton");
+    deleteButton.addEventListener("click", function(){
+        const confirm = window.confirm("Are you sure?");
+        if(confirm){
+            const form = document.getElementById("deleteForm");
+            form.submit();
+        }
+    });
+</script>
