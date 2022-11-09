@@ -20,7 +20,7 @@
     </div>
     <div>
         <label for="price">Price:</label>
-        <input type="number" name="price">
+        <input type="number" step=".01" name="price">
     </div>
     <div>
         <label for="series">Series:</label>
@@ -28,7 +28,7 @@
     </div>
     <div>
         <label for="sale_date">Sale data:</label>
-        <input type="data" name="sale_date">
+        <input type="date" name="sale_date">
     </div>
     <div>
         <label for="type">Type:</label>
