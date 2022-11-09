@@ -27,8 +27,8 @@
         <input type="text" name="series">
     </div>
     <div>
-        <label for="sale_data">Sale data:</label>
-        <input type="data" name="sale_data">
+        <label for="sale_date">Sale data:</label>
+        <input type="data" name="sale_date">
     </div>
     <div>
         <label for="type">Type:</label>

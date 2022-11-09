@@ -11,9 +11,7 @@
 </head>
 
 <body>
-  <div style="display: flex">
     @yield('comics')
-  </div>
 
     @yield('comic')
     @yield('create')
