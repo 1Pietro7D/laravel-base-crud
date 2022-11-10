@@ -7,12 +7,12 @@
 <div>
     <!--a href="/comics/{{ $comic->id }} "> {{ $comic->title }} </a-->
     <a href="{{ route('comics.show', $comic->id) }}"> {{ $comic->title }} </a>
-    {{-- <form action="{{route('comics.destroy', ['comic'=> $comic->id])}}" method="POST" id="deleteForm">
+  <form action="{{route('comics.destroy', ['comic'=> $comic->id])}}" method="POST" >
         @csrf
         @method('DELETE')
-        <input type="button" id="deleteButton" value="DELETE">
+        <input type="submit" class="delete-btn" value="DELETE">
     </form>
-    non mi va bene per via del id--}}
+
 </div>
 @endforeach
 </div>
