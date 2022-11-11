@@ -1,6 +1,6 @@
 @extends('comics.layouts.layout')
 
-@section('comic')
+@section('show')
 <h1>{{ $comic->title }}</h1>
     <div>
         <img src="{{ $comic->thumb }}" alt="{{ $comic->title }} cover">
@@ -11,6 +11,7 @@
     @csrf
     @method('DELETE')
     <input type="button" id="deleteButton" value="DELETE">
+    <a href="{{ route('comics.edit', $comic->id) }}">EDIT</a>
 </form>
 <a href="{{ route('comics.index') }}">BACK</a>
 @endsection

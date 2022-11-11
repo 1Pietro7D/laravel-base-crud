@@ -11,10 +11,11 @@
 </head>
 
 <body>
-    @yield('comics')
+    @yield('index')
 
-    @yield('comic')
+    @yield('show')
     @yield('create')
+    @yield('edit')
     {{-- @include('partials.header')
     @include('partials.main')
     @include('partials.footer') --}}

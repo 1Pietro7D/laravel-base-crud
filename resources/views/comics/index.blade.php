@@ -1,7 +1,7 @@
 @extends('comics.layouts.layout')
 
 
-@section('comics')
+@section('index')
 <div>
 @foreach ($comics as $comic)
 <div>
@@ -11,10 +11,13 @@
         @csrf
         @method('DELETE')
         <input type="submit" class="delete-btn" value="DELETE">
+        <a href="{{ route('comics.edit', ['comic'=> $comic->id]) }}">EDIT</a>
     </form>
 
 </div>
 @endforeach
+<div><a href="/create">Create</a></div>
+
 </div>
 @endsection
 
