@@ -29,7 +29,7 @@
     </div>
     <div>
         <label for="sale_date">Sale data:</label>
-        <input type="date" name="sale_date" value="{{ $comic->sale_data }}">
+        <input type="date" name="sale_date" value="{{ $comic->sale_date }}">
     </div>
     <div>
         <label for="type">Type:</label>
