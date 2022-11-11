@@ -10,7 +10,11 @@ return [
     | This value is the name of your application. This value is used when the
     | framework needs to place the application's name in a notification or
     | any other location as required by the application or its packages.
-    |
+
+    | Questo valore è il nome della tua applicazione. Questo valore viene
+    | utilizzato quando il framework deve inserire il nome dell'applicazione
+    | in una notifica o in qualsiasi altro percorso come richiesto
+    | dall'applicazione o dai suoi pacchetti.
     */
 
     'name' => env('APP_NAME', 'Laravel'),
@@ -90,7 +94,11 @@ return [
     | The fallback locale determines the locale to use when the current one
     | is not available. You may change the value to correspond to any of
     | the language folders that are provided through your application.
-    |
+
+    | La localizzazione di fallback determina quale locale utilizzare
+    | quando quella corrente non è disponibile. È possibile modificare
+    | il valore in modo che corrisponda a qualsiasi cartella
+    | della lingua fornita tramite l'applicazione.
     */
 
     'fallback_locale' => 'en',
