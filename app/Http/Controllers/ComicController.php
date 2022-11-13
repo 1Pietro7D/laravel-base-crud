@@ -1,4 +1,5 @@
 <?php
+// RICORDA: SE NON è UN METODO GET CI VA IL "redirect()->route()"
 
 namespace App\Http\Controllers;
 
@@ -14,7 +15,7 @@ class ComicController extends Controller
      */
     public function index()
     {
-        //
+        //qui prendiamo tutti i dati dal nostro "modello speciale"
         $comics = Comic::all();
         return view('comics.index', compact('comics'));
     }
@@ -38,7 +39,17 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //qui salviamo i dati del create
+        $request->validate([
+            "title" => 'required',
+            "description" => 'required',
+            "thumb" => 'required',
+            "price" => 'required',
+            "series" => 'required',
+            "sale_date" => 'required|date|after_or_equal:today',
+            "type" => 'required',
+        ]);
+
         $data = $request->all();
 
         $newComic = new Comic();
@@ -59,7 +70,7 @@ class ComicController extends Controller
      */
     public function show(Comic $comic)
     {
-        //ù
+        //ritorna un elemento selezionato
         return view('comics.show', compact('comic'));
     }
 
@@ -71,7 +82,7 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        //
+        //da inviare all'update
         return view('comics.edit', compact('comic'));
     }
 
@@ -84,7 +95,17 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        //
+        //qui aggiorniamo i dati dell'edit
+        $request->validate([
+            "title" => 'required',
+            "description" => 'required',
+            "thumb" => 'required',
+            "price" => 'required',
+            "series" => 'required',
+            "sale_date" => 'required|date',
+            "type" => 'required',
+        ]);
+
         $data = $request->all();
         $comic->update($data);
         return redirect()->route('comics.show', $comic->id);
@@ -98,7 +119,7 @@ class ComicController extends Controller
      */
     public function destroy(Comic $comic)
     {
-        //
+        //gli si passa l'elemento da distruggere e ci si reindirizza alla home con i risultati di index
          $comic->delete();
         return redirect()->route('comics.index');
     }
