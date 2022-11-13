@@ -16,7 +16,7 @@
 
 </div>
 @endforeach
-<div><a href="/create">Create</a></div>
+<div><a href="{{route('comics.create',)}}">Create</a></div>
 
 </div>
 @endsection
